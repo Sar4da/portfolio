@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>CSS Div Glow Effect</title>
+</head>
+
+<body>
+    <div class="btn">Hover Me!</div>
+</body>
+
+</html>
+
+
+background: none;
+border: none;
+padding: 0;
+cursor: pointer;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s, box-shadow 0.2s;
+
+.btn:hover {
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
