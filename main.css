@@ -34,7 +34,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #015291;
+    background-color: #004473;
+    filter: blur(3px);
     left: 0;
     top: 0;
     border-radius: 16px;
@@ -54,7 +55,7 @@ body {
     filter: blur(6px);
     opacity: 1;
     z-index: -1;
-    animation: glowing 29s linear infinite;
+    animation: glowing 39s linear infinite;
     pointer-events: none;
 }
 
@@ -84,15 +85,21 @@ body {
 }
 
 .btn {
-    margin: 100px;
-    padding: 15px 40px;
+    margin: 0 8px;
+    padding: 4px;
     border: none;
     outline: none;
     color: #FFF;
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 12px;
+    border-radius: 50%;
+    background: none; /* retire le fond par défaut */
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn::after {
@@ -101,10 +108,10 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: #333; /* ou retire cette ligne pour aucun fond */
     left: 0;
     top: 0;
-    border-radius: 10px;
+    border-radius: 50%;
 }
 
 .btn::before {
@@ -141,8 +148,23 @@ body {
 }
 
 .icon-img {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     object-fit: contain;
     border-radius: 50%;
+}
+
+/*  */
+
+.logo {
+    position: absolute;
+    bottom: 0px;
+    /* Distance du bas */
+    right: 14px;
+    /* Distance du bord droit */
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 50%;
+    z-index: 20;
 }
