@@ -94,7 +94,8 @@ body {
     position: relative;
     z-index: 0;
     border-radius: 50%;
-    background: none; /* retire le fond par défaut */
+    background: none;
+    /* retire le fond par défaut */
     width: 48px;
     height: 48px;
     display: flex;
@@ -108,7 +109,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #333; /* ou retire cette ligne pour aucun fond */
+    background-color: #015291;
+    /* ou retire cette ligne pour aucun fond */
     left: 0;
     top: 0;
     border-radius: 50%;
@@ -126,10 +128,10 @@ body {
     z-index: -1;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    filter: blur(8px);
+    filter: blur(5px);
     animation: glowing 20s linear infinite;
     transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+    border-radius: 50%;
     opacity: 0;
 }
 
