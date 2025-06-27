@@ -12,7 +12,7 @@ body {
 .contenue {
     position: relative;
     background-color: #015291;
-    border-radius: 16px;
+    border-radius: 10%;
     width: 80vw;
     height: 80vh;
     margin: 40px auto;
@@ -38,7 +38,7 @@ body {
     filter: blur(3px);
     left: 0;
     top: 0;
-    border-radius: 16px;
+    border-radius: 10%;
 }
 
 .contenue::before {
@@ -51,7 +51,7 @@ body {
     background: linear-gradient(45deg,
             orange, gold, orange, #015291, #ff7300, orange, gold, orange);
     background-size: 400%;
-    border-radius: 22px;
+    border-radius: 10%;
     filter: blur(6px);
     opacity: 1;
     z-index: -1;
