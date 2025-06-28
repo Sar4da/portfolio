@@ -9,10 +9,11 @@ body {
     overflow: hidden;
 }
 
+/* section acceuil */
 .contenue {
     position: relative;
     background-color: #015291;
-    border-radius: 30%;
+    border-radius: 46px;
     width: 80vw;
     height: 80vh;
     margin: 40px auto;
@@ -38,7 +39,7 @@ body {
     filter: blur(3px);
     left: 0;
     top: 0;
-    border-radius: 30%;
+    border-radius: 46px;
 }
 
 .contenue::before {
@@ -51,7 +52,7 @@ body {
     background: linear-gradient(45deg,
             orange, gold, orange, #015291, #ff7300, orange, gold, orange);
     background-size: 400%;
-    border-radius: 30%;
+    border-radius: 46px;
     filter: blur(6px);
     opacity: 1;
     z-index: -1;
@@ -120,7 +121,7 @@ body {
     content: "";
     background: linear-gradient(45deg,
             #FF0000, #FF7300, #FFFB00, #48FF00,
-            #00FFD5, #002BFF, #FF00C8, #FF0000);
+            #00FFD5, #FF0000);
     position: absolute;
     top: -2px;
     left: -2px;
@@ -135,7 +136,6 @@ body {
     opacity: 0;
 }
 
-/* hover */
 .btn:hover::before {
     opacity: 1;
 }
@@ -156,8 +156,6 @@ body {
     border-radius: 50%;
 }
 
-/*  */
-
 .logo {
     position: absolute;
     bottom: 0px;
@@ -169,4 +167,119 @@ body {
     object-fit: contain;
     border-radius: 50%;
     z-index: 20;
+}
+
+.acceuil {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* transition vers section mes projets et autres réalisations */
+.reas {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+}
+
+.reas button {
+    margin: 10px;
+    padding: 90px;
+    white-space: nowrap;
+}
+
+.reas button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #015291;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+}
+
+.reas button::after {
+    background-color: #f1a923;
+}
+
+.reas button:active {
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.reas button:active::after {
+    background: linear-gradient(45deg,
+            orange, gold, orange);
+}
+
+@keyframes choix {
+    0% {
+        transform: scale(1);
+
+    }
+
+    100% {
+        transform: scale(10);
+    }
+}
+
+/* transition */
+
+.transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(241, 169, 35, 0.341); */
+    /* léger transparent pour voir dessous */
+    z-index: 100;
+    /* plus haut que les boutons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    transform: translateY(-5vh);
+    /* ou essaye -10% selon le rendu souhaité */
+}
+
+.transition span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #5d23f169;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    margin: 10px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    transition: background 0.3s, color 0.3s;
+}
+
+.transition span :nth-last-child(1) {
+    animation: choix 10s linear infinite;
+}
+
+.transition span:nth-child(2) {
+    animation: choix 10s linear;
+    transform: scale(10);
+}
+
+
+.mes-projets {
+    display: none;
+}
+
+.mes-autres-reas {
+    display: none;
 }
