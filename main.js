@@ -1,0 +1,46 @@
+const btnProjets = document.getElementById('projets');
+const btnAutres = document.getElementById('autres');
+const divPresentation = document.body.querySelector('.presentatn');
+const divMesProjets = document.body.querySelector('.mes-projets');
+const divAutres = document.body.querySelector('.mes-autres-reas');
+const btnretourProjets = document.body.querySelector('.retour-projets');
+const btnRetourAutres = document.body.querySelector('.retour-projets.autres');
+
+btnProjets.addEventListener('click', pousserProjets, { once: true });
+btnAutres.addEventListener('click', pousserAutres);
+btnretourProjets.addEventListener('click', revenirDeProjets, { once: true });
+
+function pousserProjets() {
+    // retire toutes les classes d'animation de présentation
+    divPresentation.classList.remove('RdeP', 'P', 'A', 'RdeA');
+    divMesProjets.classList.remove('RdeP', 'P');
+    // ajoute l'animation de poussée
+    divPresentation.classList.add('P');
+    divMesProjets.classList.add('P');
+    btnretourProjets.addEventListener('click', revenirDeProjets, { once: true });
+}
+
+function revenirDeProjets() {
+    divPresentation.classList.remove('P', 'A', 'RdeA');
+    divPresentation.classList.add('RdeP');
+    divMesProjets.classList.remove('P');
+    divMesProjets.classList.add('RdeP');
+    btnProjets.addEventListener('click', pousserProjets, { once: true });
+}
+
+function pousserAutres() {
+    divPresentation.classList.remove('RdeA', 'A', 'P', 'RdeP');
+    divAutres.classList.remove('RdeA', 'A');
+    divPresentation.classList.add('A');
+    divAutres.classList.add('A');
+    btnRetourAutres.addEventListener('click', revenirDeAutres, { once: true });
+}
+
+function revenirDeAutres() {
+    divPresentation.classList.remove('A', 'P', 'RdeP');
+    divPresentation.classList.add('RdeA');
+    divAutres.classList.remove('A');
+    divAutres.classList.add('RdeA');
+    btnProjets.addEventListener('click', pousserProjets, { once: true });
+    btnAutres.addEventListener('click', pousserAutres, { once: true });
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenue à mon portfolio</title>
     <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer> </script>
 </head>
 
 <body>
@@ -15,39 +16,50 @@
             <div class="liens">
                 <button class="btn"
                     onclick="window.open('https://www.linkedin.com/in/sara-inmaculada-kinkela-elonga', '_blank')">
-                    <img src="lnkdn.jpg" alt="LinkedIn" class="icon-img" />
+                    <img src="images/lnkdn.jpg" alt="LinkedIn" class="icon-img" />
                 </button>
                 <button class="btn" onclick="window.open('mailto:sara.kelonga@gmail.com')">
-                    <img src="gmail.png" alt="mail" class="icon-img" />
+                    <img src="images/gmail.png" alt="mail" class="icon-img" />
                 </button>
-                <button class="btn" onclick="window.open('cv Sara Inmaculada.pdf')">
-                    <img src="cv.jpg" alt="cv" class="icon-img" />
+                <button class="btn" onclick="window.open('ressources/cv Sara Inmaculada.pdf')">
+                    <img src="images/cv.jpg" alt="cv" class="icon-img" />
                 </button>
                 <button class="btn" onclick="window.open('https://github.com/Sar4da')">
-                    <img src="github.jpg" alt="github" class="icon-img" />
+                    <img src="images/github.jpg" alt="github" class="icon-img" />
                 </button>
-
             </div>
             <div class="presentatn">
                 <div class="reas">
-                    <button class="btn"> Mes projets</button>
-                    <button class="btn"> Mes autres réalisations</button>
+                    <button class="btn" id="projets"> Mes projets</button>
+                    <button class="btn" id="autres"> Mes autres réalisations</button>
                 </div>
-                Bonjour, je m'appelle Sara et bienvenue sur mon Portfolio, je vous invite a voir
-                les liens de contact et les liens qui mennent à mes différents projets
+                Bonjour, je m'appelle Sara et bienvenue...
             </div>
-    </div><span class="logo">
-        <img src="univevry.jpg" alt="logo" class="logo" />
+            <div class="mes-projets">
+                <section class="selection">
+                    <button> Arbre genealogique </button>
+                    <button> Mairie </button>
+                </section>
+                <button class="retour-projets" type="button" title="Retour aux projets">
+                    <img src="/images/fleche.jpg" alt="fleche" class="icon-img" />
+                </button>
+            </div>
+            <div class="mes-autres-reas">
+                <button class="retour-projets autres" type="button" title="Retour aux autres réalisations">
+                    <img src="/images/fleche.jpg" alt="Retour" class="icon-img" />
+                </button>
+                <section class="selection">
+                    <button> vlog japonais </button>
+                    <button> Montage PC </button>
+                </section>
+
+            </div>
+        </section>
+
+    </div>
+    <span class="logo">
+        <img src="images/univevry.jpg" alt="logo" class="logo" />
     </span>
-    </section>
-
-    <section class="mes-projets">
-
-    </section>
-
-    <section class="mes-autres-reas">
-
-    </section>
     </div>
 
 </body>

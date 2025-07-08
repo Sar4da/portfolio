@@ -5,18 +5,17 @@ body {
     background-color: #015291;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 2vh;
     overflow: hidden;
 }
 
-/* section acceuil */
 .contenue {
     position: relative;
     background-color: #015291;
-    border-radius: 46px;
+    border-radius: 4.6vh;
     width: 80vw;
     height: 80vh;
-    margin: 40px auto;
+    margin: 4vh auto;
     color: white;
     display: flex;
     flex-direction: column;
@@ -26,7 +25,7 @@ body {
     text-align: center;
     z-index: 0;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.2vh 0.8vh rgba(0, 0, 0, 0.1);
 }
 
 .contenue::after {
@@ -36,24 +35,24 @@ body {
     width: 100%;
     height: 100%;
     background-color: #004473;
-    filter: blur(3px);
+    filter: blur(0.3vh);
     left: 0;
     top: 0;
-    border-radius: 46px;
+    border-radius: 4.6vh;
 }
 
 .contenue::before {
     content: "";
     position: absolute;
-    top: -6px;
-    left: -6px;
-    width: calc(100% + 12px);
-    height: calc(100% + 12px);
+    top: -0.6vh;
+    left: -0.6vw;
+    width: calc(100% + 1.2vw);
+    height: calc(100% + 1.2vh);
     background: linear-gradient(45deg,
             orange, gold, orange, #015291, #ff7300, orange, gold, orange);
     background-size: 400%;
-    border-radius: 46px;
-    filter: blur(6px);
+    border-radius: 4.6vh;
+    filter: blur(0.6vh);
     opacity: 1;
     z-index: -1;
     animation: glowing 39s linear infinite;
@@ -78,22 +77,22 @@ body {
 .liens {
     width: 98%;
     position: absolute;
-    top: 0.4px;
+    top: 0.08597vh;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 0.5vh;
     z-index: 10;
     background-color: #004473;
-    border-radius: 46px;
+    border-radius: 4.6vh;
     /* même valeur que .contenue */
 }
 
 .btn {
-    margin: 0 8px;
-    padding: 2px;
+    margin: 0 0.8vh;
+    padding: 0.2vh;
     border: none;
     outline: none;
     color: #FFF;
@@ -102,9 +101,8 @@ body {
     z-index: 0;
     border-radius: 50%;
     background: none;
-    /* retire le fond par défaut */
-    width: 48px;
-    height: 48px;
+    width: 4.8vh;
+    height: 4.8vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +115,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: #015291;
-    /* ou retire cette ligne pour aucun fond */
     left: 0;
     top: 0;
     border-radius: 50%;
@@ -129,13 +126,13 @@ body {
             #FF0000, #FF7300, #FFFB00, #48FF00,
             #00FFD5, #FF0000);
     position: absolute;
-    top: -2px;
-    left: -2px;
+    top: -0.2vh;
+    left: -0.2vh;
     background-size: 600%;
     z-index: -1;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    filter: blur(5px);
+    width: calc(100% + 0.4vh);
+    height: calc(100% + 0.4vh);
+    filter: blur(0.5vh);
     animation: glowing 20s linear infinite;
     transition: opacity .3s ease-in-out;
     border-radius: 50%;
@@ -146,30 +143,24 @@ body {
     opacity: 1;
 }
 
-.btn:active:after {
-    background: transparent;
-}
-
 .btn:active {
     color: #000;
     font-weight: bold;
 }
 
 .icon-img {
-    width: 36px;
-    height: 36px;
+    width: 3.6vh;
+    height: 3.6vh;
     object-fit: contain;
     border-radius: 50%;
 }
 
 .logo {
     position: absolute;
-    bottom: 65px;
-    /* Distance du bas */
-    right: 114px;
-    /* Distance du bord droit */
-    width: 120px;
-    height: 120px;
+    bottom: 6.5vh;
+    right: 11.4vh;
+    width: 12.0vh;
+    height: 12.0vh;
     object-fit: contain;
     border-radius: 50%;
     z-index: 20;
@@ -185,45 +176,38 @@ body {
     position: relative;
 }
 
-/* transition vers section mes projets et autres réalisations */
 .presentatn {
     display: flex;
     width: 97%;
+    top: 10%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     background-color: #004473;
-    gap: 200px;
-    animation: pousser 3s ease-in-out forwards;
+    gap: 20.0vh;
 }
 
-@keyframes pousser {
-    0% {
-        transform: translateY(0);
-    }
+.P {
+    animation: pousser-projets 3s ease-in-out forwards;
+}
 
-    100% {
-        transform: translateY(-700px);
-    }
+.RdeP {
+    animation: revenir-projets 3s ease-in-out forwards;
 }
 
 .reas {
     display: flex;
     flex-direction: row;
-    gap: 90px;
+    gap: 9.0vh;
     justify-content: center;
-    /* Centre horizontalement */
 }
 
 .reas button {
-    margin: 10px;
-    width: 180px;
-    /* Taille du bouton */
-    height: 180px;
-    /* Taille du bouton */
+    margin: 1.0vh;
+    width: 18.0vh;
+    height: 18.0vh;
     border-radius: 50%;
-    /* Rond */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -234,7 +218,6 @@ body {
     position: relative;
     z-index: 1;
     white-space: nowrap;
-    /* padding: 0;  <-- retire le gros padding */
 }
 
 .reas button::before {
@@ -262,14 +245,132 @@ body {
             orange, gold, orange);
 }
 
-
-/* transition */
-
-
 .mes-projets {
-    display: none;
+    display: flex;
+    width: 97%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: translateY(23vh);
+}
+
+.mes-projets.P {
+    animation: pousser-projets-deux 3s ease-in-out forwards;
+}
+
+.mes-projets.RdeP {
+    animation: revenir-projets-deux 3s ease-in-out forwards;
+}
+
+@keyframes pousser-projets {
+    100% {
+        transform: translateY(-60vh);
+    }
+}
+
+@keyframes revenir-projets {
+    0% {
+        transform: translateY(-60vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pousser-projets-deux {
+    100% {
+        transform: translateY(-30vh);
+    }
+}
+
+@keyframes revenir-projets-deux {
+    0% {
+        transform: translateY(-30vh);
+    }
+
+    100% {
+        transform: translateY(25vh);
+    }
+}
+
+@keyframes pousser-autres {
+    100% {
+        transform: translateY(81vh);
+    }
+}
+
+@keyframes revenir-autres {
+    0% {
+        transform: translateY(81vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pousser-autres-deux {
+    100% {
+        transform: translateY(-41vh);
+    }
+}
+
+@keyframes revenir-autres-deux {
+    0% {
+        transform: translateY(-41vh);
+    }
+
+    100% {
+        transform: translateY(-80vh);
+    }
+}
+
+.retour-projets {
+    margin: 0 0.8vh;
+    padding: 0.2vh;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 50%;
+    background-color: #f1a923;
+    width: 4.8vh;
+    height: 4.8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.retour-projets.autres {
+    transform: rotate(180deg);
 }
 
 .mes-autres-reas {
-    display: none;
+    display: flex;
+    width: 97%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: translateY(-80vh);
+}
+
+.A {
+    animation: pousser-autres 3s ease-in-out forwards;
+}
+
+.RdeA {
+    animation: revenir-autres 3s ease-in-out forwards;
+}
+
+.mes-autres-reas.A {
+    animation: pousser-autres-deux 3s ease-in-out forwards;
+}
+
+.mes-autres-reas.RdeA {
+    animation: revenir-autres-deux 3s ease-in-out forwards;
 }
