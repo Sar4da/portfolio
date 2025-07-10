@@ -180,7 +180,7 @@ body {
 .presentatn {
     display: flex;
     width: 97%;
-    top: 10%;
+    top: 60%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -247,31 +247,24 @@ body {
 
 .mes-projets {
     display: flex;
-    top: 40%;
-    width: 97%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-}
-
-.mes-projets.P {
-    animation: pousser-projets 3s ease-in-out forwards;
-}
-
-.mes-projets.RdeP {
-    animation: revenir-projets 3s ease-in-out forwards;
+    width: 97%;
+    gap: 5vh;
+    top: 95%;
 }
 
 @keyframes pousser-projets {
     100% {
-        transform: translateY(-60vh);
+        transform: translateY(-70vh);
     }
 }
 
 @keyframes revenir-projets {
     0% {
-        transform: translateY(-60vh);
+        transform: translateY(-70vh);
     }
 
     100% {
@@ -281,13 +274,13 @@ body {
 
 @keyframes pousser-autres {
     100% {
-        transform: translateY(65vh);
+        transform: translateY(75vh);
     }
 }
 
 @keyframes revenir-autres {
     0% {
-        transform: translateY(65vh);
+        transform: translateY(75vh);
     }
 
     100% {
@@ -320,12 +313,13 @@ body {
 
 .mes-autres-reas {
     display: flex;
-    bottom: 125%;
+    bottom: 165%;
     width: 97%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+    gap: 5.0vh;
 }
 
 .A {
@@ -336,10 +330,69 @@ body {
     animation: revenir-autres 3s ease-in-out forwards;
 }
 
-.mes-autres-reas.A {
-    animation: pousser-autres 3s ease-in-out forwards;
+
+.selection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    gap: 1vh;
 }
 
-.mes-autres-reas.RdeA {
-    animation: revenir-autres 3s ease-in-out forwards;
+.bloc-bouton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1a923;
+    border-radius: 0.8vh;
+    padding: 1vh;
+    margin: 5vh;
+    width: fit-content;
+}
+
+.description {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    margin-top: 1vh;
+    background: #ffffff8b;
+    color: #000;
+    border-radius: 0.5vh;
+    font-size: 1.6vh;
+    width: 100%;
+    text-align: center;
+}
+
+.bloc-bouton:hover .description {
+    opacity: 1;
+    max-height: 20vh;
+}
+
+
+.bloc-projets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #f1a923;
+    color: #ffffff;
+    border-radius: 0.8vh;
+    font-size: 2.4vh;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2vh;
+    border: none;
+    white-space: nowrap;
+}
+
+.icon-img.bouton {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 10%;
 }
