@@ -396,3 +396,142 @@ body {
     height: 30vh;
     border-radius: 10%;
 }
+
+/****************************** bienvenue ******************************/
+/* Sélectionne le lien */
+a.tuto-lien {
+    color: #ffffff;
+    /* 🌈 couleur "lanc" - change selon ton goût */
+    background-color: transparent;
+    text-decoration: none;
+    /* enlève soulignement par défaut */
+    /* surlignement personnalisé */
+    padding-bottom: 2vh;
+    transition: all 0.3s ease;
+    border-bottom: #00437300 2vh solid;
+}
+
+/* Effet au survol */
+a.tuto-lien:hover {
+    color: #f1a923;
+    background-color: #015291;
+    border: #f1a923 0.2vh solid;
+    padding: 1vh;
+}
+
+/* div bienvenue */
+
+.defilement-1 {
+    max-width: 63.5vh;
+    overflow: hidden;
+    border: 0.64vh solid #A6CAEC;
+}
+
+.defilement-1 .defilement {
+    animation: slider-1 50s infinite ease-in-out;
+    display: flex;
+}
+
+.defilement p {
+    background: #144475;
+    flex-shrink: 0;
+    padding: 7.62vh 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.6vh;
+    color: #ffffff;
+}
+
+.image-texte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    padding: 7.62vh 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.4vh;
+    color: #f1f1f1;
+    background: #000;
+}
+
+.texte {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    /* espace entre les <span> */
+    text-align: center;
+    font-size: 2.4vh;
+    color: #f1f1f1;
+    background: #000;
+    padding: 4vh;
+    border-radius: 1vh;
+
+}
+
+.image-texte img {
+    width: 100%;
+    height: auto;
+}
+
+#bienvenue {
+    /* milieu de l'ecran */
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #144475;
+    z-index: 3;
+}
+
+@keyframes slider-1 {
+
+    0%,
+    41% {
+        transform: translateX(0);
+    }
+
+    46.36%,
+    59% {
+        transform: translateX(-100%);
+    }
+
+    64.54%,
+    77% {
+        transform: translateX(-200%);
+    }
+
+    82.72%,
+    95% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+#sombre {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.404);
+    z-index: 2;
+    display: none;
+    /* Masqué par défaut */
+}
+
+.bouton-bienvenue {
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+    background-color: #f1a923;
+    color: #000;
+    border: none;
+    padding: 1vh 2vh;
+    border-radius: 0.8vh;
+    font-size: 2.4vh;
+    cursor: pointer;
+}

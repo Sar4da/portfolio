@@ -44,3 +44,19 @@ function revenirDeAutres() {
     btnProjets.addEventListener('click', pousserProjets, { once: true });
     btnAutres.addEventListener('click', pousserAutres, { once: true });
 }
+
+// Fonction pour afficher la section de bienvenue
+const lienBienvenue = document.querySelector('.tuto-lien');
+lienBienvenue.addEventListener('click', afficherBienvenue);
+function afficherBienvenue() {
+    const sectionBienvenue = document.getElementById('bienvenue');
+    const sombre = document.getElementById('sombre');
+    sombre.style.display = 'block';
+    sectionBienvenue.style.display = 'flex';
+    const boutonBienvenue = document.querySelector('.bouton-bienvenue');
+    // avec fontion flechée
+    boutonBienvenue.addEventListener('click', () => {
+        sectionBienvenue.style.display = 'none';
+        sombre.style.display = 'none';
+    });
+}
