@@ -367,6 +367,21 @@ body {
     text-align: center;
 }
 
+.description {
+    font-size: 1.4vh;
+    white-space: normal;
+    word-break: break-word;
+    padding: 1vh;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+
 .bloc-bouton:hover .description {
     opacity: 1;
     max-height: 20vh;
@@ -527,4 +542,132 @@ a.tuto-lien:hover {
     border-radius: 0.8vh;
     font-size: 2.4vh;
     cursor: pointer;
+}
+
+/* media query */
+@media (max-width: 768px) {
+    .contenue {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .liens {
+        top: 0%;
+    }
+
+    .btn {
+        width: 5vh;
+        height: 5vh;
+    }
+
+    .presentatn {
+        top: 90%;
+        gap: 15vh;
+    }
+
+    .reas button {
+        width: 15vh;
+        height: 15vh;
+        font-size: 0.8rem;
+    }
+
+
+    .mes-autres-reas {
+        bottom: 190%;
+        gap: 3vh;
+    }
+
+    .mes-projets {
+        top: 124%;
+        gap: 3vh;
+    }
+
+    .selection {
+        display: flex;
+        flex-direction: column;
+        gap: 0vh;
+    }
+
+    @keyframes pousser-projets {
+        100% {
+            transform: translateY(-90vh);
+        }
+    }
+
+    @keyframes revenir-projets {
+        0% {
+            transform: translateY(-90vh);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pousser-autres {
+        100% {
+            transform: translateY(105vh);
+        }
+    }
+
+    @keyframes revenir-autres {
+        0% {
+            transform: translateY(105vh);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .retour-projets {
+        position: absolute;
+        top: -5%;
+    }
+
+    .retour-projets.autres {
+        top: 100%;
+    }
+
+
+    .bloc-bouton {
+        max-width: 90vw;
+        width: fit-content;
+        word-wrap: break-word;
+        max-height: fit-content;
+    }
+
+    .bloc-projets {
+        font-size: 1.6vh;
+        padding: 1vh;
+    }
+
+    .description {
+        opacity: 0;
+        max-height: 0;
+        overflow: visible;
+        transition: opacity 0.3s ease, max-height 0.3s ease;
+        white-space: normal;
+        word-break: break-word;
+        padding: 1vh;
+        font-size: 1.4vh;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .bloc-bouton:hover .description {
+        opacity: 1;
+        max-height: 100vh;
+    }
+
+    .icon-img.bouton {
+        width: 20vh;
+        height: 20vh;
+    }
+
+    #bienvenue {
+        width: 90vw;
+        height: 60vh;
+    }
+
 }
