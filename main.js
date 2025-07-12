@@ -6,11 +6,15 @@ const divAutres = document.body.querySelector('.mes-autres-reas');
 const btnretourProjets = document.body.querySelector('.retour-projets');
 const btnRetourAutres = document.body.querySelector('.retour-projets.autres');
 
+let sectionOuverture = null;
+
 btnProjets.addEventListener('click', pousserProjets, { once: true });
 btnAutres.addEventListener('click', pousserAutres);
 btnretourProjets.addEventListener('click', revenirDeProjets, { once: true });
 
 function pousserProjets() {
+    if (sectionOuverture) return; // Si une section est déjà ouverte, ne rien faire
+    sectionOuverture = 'projets'; // Marque la section comme ouverte
     // retire toutes les classes d'animation de présentation
     divPresentation.classList.remove('RdeP', 'P', 'A', 'RdeA');
     divMesProjets.classList.remove('RdeP', 'P');
@@ -21,6 +25,7 @@ function pousserProjets() {
 }
 
 function revenirDeProjets() {
+    sectionOuverture = null; // Réinitialise la section ouverte
     divPresentation.classList.remove('P', 'A', 'RdeA');
     divPresentation.classList.add('RdeP');
     divMesProjets.classList.remove('P');
@@ -29,6 +34,9 @@ function revenirDeProjets() {
 }
 
 function pousserAutres() {
+    if (sectionOuverture) return; // Si une section est déjà ouverte, ne rien faire
+    sectionOuverture = 'autres'; // Marque la section comme ouverte
+    // retire toutes les classes d'animation de présentation
     divPresentation.classList.remove('RdeA', 'A', 'P', 'RdeP');
     divAutres.classList.remove('RdeA', 'A');
     divPresentation.classList.add('A');
@@ -37,6 +45,8 @@ function pousserAutres() {
 }
 
 function revenirDeAutres() {
+    sectionOuverture = null; // Réinitialise la section ouverte
+    // retire toutes les classes d'animation de présentation
     divPresentation.classList.remove('A', 'P', 'RdeP');
     divPresentation.classList.add('RdeA');
     divAutres.classList.remove('A');

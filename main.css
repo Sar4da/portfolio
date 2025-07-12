@@ -401,17 +401,13 @@ body {
 /* Sélectionne le lien */
 a.tuto-lien {
     color: #ffffff;
-    /* 🌈 couleur "lanc" - change selon ton goût */
     background-color: transparent;
     text-decoration: none;
-    /* enlève soulignement par défaut */
-    /* surlignement personnalisé */
     padding-bottom: 2vh;
     transition: all 0.3s ease;
     border-bottom: #00437300 2vh solid;
 }
 
-/* Effet au survol */
 a.tuto-lien:hover {
     color: #f1a923;
     background-color: #015291;
@@ -428,7 +424,7 @@ a.tuto-lien:hover {
 }
 
 .defilement-1 .defilement {
-    animation: slider-1 50s infinite ease-in-out;
+    animation: slider-1 44s infinite ease-in-out;
     display: flex;
 }
 
@@ -460,7 +456,6 @@ a.tuto-lien:hover {
     display: flex;
     flex-direction: column;
     gap: 2vh;
-    /* espace entre les <span> */
     text-align: center;
     font-size: 2.4vh;
     color: #f1f1f1;
@@ -476,7 +471,6 @@ a.tuto-lien:hover {
 }
 
 #bienvenue {
-    /* milieu de l'ecran */
     display: none;
     flex-direction: column;
     position: absolute;
@@ -520,7 +514,6 @@ a.tuto-lien:hover {
     background-color: rgba(0, 0, 0, 0.404);
     z-index: 2;
     display: none;
-    /* Masqué par défaut */
 }
 
 .bouton-bienvenue {
