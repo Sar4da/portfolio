@@ -349,14 +349,15 @@ body {
     background-color: #f1a923;
     border-radius: 0.8vh;
     padding: 1vh;
-    margin: 5vh;
+    padding-bottom: -1vh;
+    margin: 7vh;
     width: fit-content;
 }
 
 .description {
     opacity: 0;
     max-height: 0;
-    overflow: hidden;
+    overflow: visible;
     transition: opacity 0.3s ease, max-height 0.3s ease;
     margin-top: 1vh;
     background: #ffffff8b;
@@ -404,12 +405,15 @@ body {
     font-size: 2vh;
     border: none;
     white-space: nowrap;
+    gap: 1vh;
 }
 
 .icon-img.bouton {
-    width: 30vh;
-    height: 30vh;
-    border-radius: 10%;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 4%;
+    object-fit: cover;
+    filter: drop-shadow(0 4px 6px rgb(182, 98, 3));
 }
 
 /****************************** bienvenue ******************************/
@@ -561,7 +565,7 @@ a.tuto-lien:hover {
     }
 
     .presentatn {
-        top: 90%;
+        top: 70%;
         gap: 15vh;
     }
 
@@ -573,12 +577,12 @@ a.tuto-lien:hover {
 
 
     .mes-autres-reas {
-        bottom: 190%;
+        bottom: 180%;
         gap: 3vh;
     }
 
     .mes-projets {
-        top: 124%;
+        top: 114%;
         gap: 3vh;
     }
 
@@ -631,15 +635,16 @@ a.tuto-lien:hover {
 
 
     .bloc-bouton {
-        max-width: 90vw;
         width: fit-content;
         word-wrap: break-word;
         max-height: fit-content;
+        margin: 3vh;
     }
 
     .bloc-projets {
         font-size: 1.6vh;
-        padding: 1vh;
+        padding: 0%;
+        margin: 0%;
     }
 
     .description {
@@ -648,7 +653,6 @@ a.tuto-lien:hover {
         overflow: visible;
         transition: opacity 0.3s ease, max-height 0.3s ease;
         white-space: normal;
-        word-break: break-word;
         padding: 1vh;
         font-size: 1.4vh;
         width: 100%;
@@ -661,8 +665,8 @@ a.tuto-lien:hover {
     }
 
     .icon-img.bouton {
-        width: 20vh;
-        height: 20vh;
+        width: 18vh;
+        height: 18vh;
     }
 
     #bienvenue {
