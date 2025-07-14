@@ -569,10 +569,13 @@ a.tuto-lien:hover {
         gap: 15vh;
     }
 
+
+
     .reas button {
         width: 15vh;
         height: 15vh;
         font-size: 0.8rem;
+        white-space: wrap;
     }
 
 
