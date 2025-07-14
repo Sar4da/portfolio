@@ -74,7 +74,7 @@ function afficherBienvenue() {
 // desactiver desciption quand on clique ailleurs
 document.addEventListener('click', function (event) {
     const description = document.querySelector('.description');
-    if (!event.target.closest('.bloc-bouton') && description) {
-        description.style.display = 'none';
+    if (description.style.opacity == '1') {
+        description.style.opacity = '0';
     }
 });
