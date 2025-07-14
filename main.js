@@ -70,3 +70,11 @@ function afficherBienvenue() {
         sombre.style.display = 'none';
     });
 }
+
+// desactiver desciption quand on clique ailleurs
+document.addEventListener('click', function (event) {
+    const description = document.querySelector('.description');
+    if (!event.target.closest('.bloc-bouton') && description) {
+        description.style.display = 'none';
+    }
+});
