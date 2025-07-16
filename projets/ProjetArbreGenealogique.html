@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Arbre genealogique</title>
+    <link rel="stylesheet" href="styleProjets.css">
+    
+</head>
+<body>
+    <section class="titre"> 
+        <h1> Arbre Généalogique </h1>
+        <p class="description-rapide"> L2, Université d’Évry, 2023-2024</p>
+        <p class="description-rapide"> En groupe de 2</p>
+        <p class="description-rapide"> Langage : JAVA</p>
+        <p class="description-rapide"> Biblioothèques : Date, JCalendar, HashSet et ArrayList</p>
+        <p class="description-rapide"> IDE : Visual Studio Code</p>
+
+        <!-- <p> 🛠️ Technologies utilisées
+            Langage : Java
+            IDE : Visual Studio Code
+            Bibliothèques :
+            JCalendar pour la sélection des dates
+            ArrayList, HashSet pour la gestion des collections
+            Date, Calendar pour la gestion des âges
+            Interface graphique : Java Swing (JFrame, JPanel, etc.)
+            Modélisation UML : StarUML
+        </p> -->
+    <a href="#resume"class="suite">suite
+        <p class="fleche">^</p>
+    </a>        
+        
+    </section>  
+    <section id="resume" class="resume">
+        <h2> Résumé</h2>
+        <p>Ce projet a été réalisé dans le cadre du cours de Programmation Orientée Objet (L2, Université d’Évry, 2023-2024). </p>     
+        <p> En binôme, nous avons conçu une application Java permettant de créer, visualiser et interroger un arbre généalogique. Chaque personne est représentée comme un objet contenant ses informations personnelles et ses liens familiaux (parents, enfants, conjoints).</p>
+        <p>L’objectif était de manipuler des structures de données complexes et de mettre en œuvre les principes de l’héritage et de l’encapsulation.</p>
+    </section>  
+
+    <section>
+        <h2>Structure du code</h2>
+        <p>Personne : classe de base avec nom, prénom, dates, parents, enfants, mariages</p> 
+        <p>Homme / Femme : héritent de Personne</p>
+        <p>Mariage : contient les conjoints, les enfants, les dates</p>
+        <p>ArbreGenealogique : gère la liste des personnes et des mariages</p>
+        <p>GenealogyTreeApp : interface graphique principale</p>
+    </section>
+
+    <section>
+        <h2> Fonctionnalités</h2>
+        <p>- Ajout de personnes (homme/femme) avec date de naissance et décès- Création de mariages et d·enfants- Affichage graphique de l·arbre généalogique- Consultation des informations d·une personne- Recherche des : ancêtres, (demi-)frères et s·urs, cousins, oncles et tantes- Interface graphique avec menus interactifs- Vérification de la cohérence des âges (ex. : un parent doit être plus âgé que son enfant)</p>
+    </section>
+    
+    
+    <!--
+    <h2>objectif pédagogique</h2>
+    <p>- Appliquer les concepts de la POO (héritage, encapsulation, polymorphisme)- Manipuler des structures arborescentes- Créer une interface graphique avec Swing- Gérer des données dynamiques (ajout de personnes, mariages, enfan </p>
+    <h2> Fonctionnalités</h2>
+    <p>- Ajout de personnes (homme/femme) avec date de naissance et décès- Création de mariages et d·enfants- Affichage graphique de l·arbre généalogique- Consultation des informations d·une personne- Recherche des : ancêtres, (demi-)frères et s·urs, cousins, oncles et tantes- Interface graphique avec menus interactifs- Vérification de la cohérence des âges (ex. : un parent doit être plus âgé que son enfant)</p>
+    <h2>Défis rencontrés</h2>
+    <p>Fusion du code en binôme : nous avons appris à mieux collaborer en codant ensemble sur place.
+Modélisation des classes : comprendre comment représenter les relations familiales en POO a été un vrai défi, notamment pour gérer les héritages entre Personne, Homme et Femme.
+Affichage de l’arbre : représenter visuellement les générations et les liens familiaux a nécessité une logique spécifique.</p>
+    <h2>Améliorations envisagées</h2>
+    <p>Ce projet nous a permis de mettre en pratique les concepts de la POO dans un contexte concret. Nous avons appris à modéliser des relations complexes et à créer une interface utilisateur intuitive. L·arbre généalogique est un excellent exemple d·application des principes de la POO, et nous sommes fiers du résultat obtenu.</p>
+    <h2>💡 Améliorations envisagées
+Implémentation de la recherche du lien de parenté entre deux personnes (ex. : "cousin au 2e degré")
+Ajout des dates de décès et divorces
+Affichage des conjoints sans enfants
+Possibilité de visualiser l’arbre depuis le point de vue d’un conjoint
+
+📁 Structure du code
+Personne : classe de base avec nom, prénom, dates, parents, enfants, mariages
+Homme / Femme : héritent de Personne
+Mariage : contient les conjoints, les enfants, les dates
+ArbreGenealogique : gère la liste des personnes et des mariages
+GenealogyTreeApp : interface graphique principale</h2> -->
+   
+</body>
+</html>
