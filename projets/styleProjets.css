@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(226, 255, 255);
+    background-color:#e2ffff;
     font-family: Arial, sans-serif;
     display: grid;
     grid-template-areas: " titre  "
@@ -10,6 +10,17 @@ body{
                         " defis "
                         " amels ";
     grid-row-gap: 10vh ;
+}
+
+.fond {
+    position: fixed;
+    top: 70%;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    opacity: 0.1;
+    z-index: -1;
+    transform: rotate(195deg);
 }
 
 
@@ -27,7 +38,6 @@ p {
     line-height: 1.6;
     margin: 2vh 2vh;
     font-weight: bold;
-    border: 5px solid rgb(0, 204, 17);
 }
 
 @keyframes apparition{
@@ -44,7 +54,6 @@ p {
 #titre{
     grid-area: titre;
     height: 30vh;
-    border: 10px solid rgb(0, 102, 204);
 }
 
 #p p{
@@ -84,13 +93,12 @@ p {
     grid-area: resume;
     display: grid;
     grid-template-rows: 300px 50px;
-    border: 10px solid rgb(0, 102, 204);
 }
 
 @keyframes fade-up{
     from {
         opacity: 0;
-        transform: translateY(10px) scale(0.5);
+        transform: translateY(10px) scale(0.9);
     }
     to {
         opacity: 1;
@@ -101,12 +109,11 @@ p {
 h2 {
     color: rgba(0, 102, 204, 0.226);
     font-size: 15vh;
-    border: 5px solid rgb(204, 156, 0);
     animation: fade-up both;
     animation-timeline: view();
 }
 
-.timeline-item:nth-child(1){
+.timeline-item{
     animation-range : entry 20% cover 40%;
 }
 
@@ -121,26 +128,22 @@ h2 {
     grid-area: structure;
     display: grid;
     grid-template-rows: 300px 50px;
-    border: 10px solid rgb(0, 102, 204);
 }
 
 #fonction {
     grid-area: fonction;
     display: grid;
     grid-template-rows: 300px 50px;
-    border: 10px solid rgb(0, 102, 204);
 }
 
 #defis {
     grid-area: defis;
     display: grid;
     grid-template-rows: 300px 50px;
-    border: 10px solid rgb(0, 102, 204);
 }
 
 #amels {
     grid-area: amels;
     display: grid;
     grid-template-rows: 300px 50px;
-    border: 10px solid rgb(0, 102, 204);
 }
