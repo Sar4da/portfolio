@@ -8,13 +8,9 @@
     
 </head>
 <body>
-    <section class="titre"> 
-        <h1> Arbre Généalogique </h1>
-        <p class="description-rapide"> L2, Université d’Évry, 2023-2024</p>
-        <p class="description-rapide"> En groupe de 2</p>
-        <p class="description-rapide"> Langage : JAVA</p>
-        <p class="description-rapide"> Biblioothèques : Date, JCalendar, HashSet et ArrayList</p>
-        <p class="description-rapide"> IDE : Visual Studio Code</p>
+    <section id="titre"> 
+        <h1 id="arbre"> Arbre Généalogique </h1>
+
 
         <!-- <p> 🛠️ Technologies utilisées
             Langage : Java
@@ -25,20 +21,23 @@
             Date, Calendar pour la gestion des âges
             Interface graphique : Java Swing (JFrame, JPanel, etc.)
             Modélisation UML : StarUML
-        </p> -->
-    <a href="#resume"class="suite">suite
-        <p class="fleche">^</p>
-    </a>        
-        
-    </section>  
-    <section id="resume" class="resume">
+        </p> -->      
+    </section> 
+        <div id="p">
+            <p class="description-rapide" id="ldeux"> L2, Université d’Évry, 2023-2024</p>
+            <p class="description-rapide" id="en"> En groupe de 2</p>
+            <p class="description-rapide" id="lang"> Langage : JAVA</p>
+            <p class="description-rapide" id="bib"> Biblioothèques : Date, JCalendar, HashSet et ArrayList</p>
+            <p class="description-rapide" id="ide"> IDE : Visual Studio Code</p>
+        </div>
+    <section id="resume">
         <h2> Résumé</h2>
         <p>Ce projet a été réalisé dans le cadre du cours de Programmation Orientée Objet (L2, Université d’Évry, 2023-2024). </p>     
         <p> En binôme, nous avons conçu une application Java permettant de créer, visualiser et interroger un arbre généalogique. Chaque personne est représentée comme un objet contenant ses informations personnelles et ses liens familiaux (parents, enfants, conjoints).</p>
         <p>L’objectif était de manipuler des structures de données complexes et de mettre en œuvre les principes de l’héritage et de l’encapsulation.</p>
     </section>  
 
-    <section>
+    <section id="structure">
         <h2>Structure du code</h2>
         <p>Personne : classe de base avec nom, prénom, dates, parents, enfants, mariages</p> 
         <p>Homme / Femme : héritent de Personne</p>
@@ -47,9 +46,21 @@
         <p>GenealogyTreeApp : interface graphique principale</p>
     </section>
 
-    <section>
+    <section id="fonction">
         <h2> Fonctionnalités</h2>
         <p>- Ajout de personnes (homme/femme) avec date de naissance et décès- Création de mariages et d·enfants- Affichage graphique de l·arbre généalogique- Consultation des informations d·une personne- Recherche des : ancêtres, (demi-)frères et s·urs, cousins, oncles et tantes- Interface graphique avec menus interactifs- Vérification de la cohérence des âges (ex. : un parent doit être plus âgé que son enfant)</p>
+    </section>
+
+    <section id="defis">
+        <h2> Défis et limites</h2>
+        <p>Fusion du code en binôme : nous avons appris à mieux collaborer en codant ensemble sur place.
+Modélisation des classes : comprendre comment représenter les relations familiales en POO a été un vrai défi, notamment pour gérer les héritages entre Personne, Homme et Femme.
+Affichage de l’arbre : représenter visuellement les générations et les liens familiaux a nécessité une logique spécifique.</p>  
+    </section>
+
+    <section id="amels">
+        <h2>Amelioration envisagées</h2>
+        
     </section>
     
     
