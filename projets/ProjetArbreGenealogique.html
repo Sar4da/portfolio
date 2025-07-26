@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Arbre genealogique</title>
     <link rel="stylesheet" href="styleProjets.css">
-    
+    <script src="scriptProjets.js"></script>
 </head>
 <body>
     <section id="titre"> 
@@ -48,7 +48,32 @@
 
     <section id="fonction">
         <h2> Fonctionnalités</h2>
-        <p>- Ajout de personnes (homme/femme) avec date de naissance et décès- Création de mariages et d·enfants- Affichage graphique de l·arbre généalogique- Consultation des informations d·une personne- Recherche des : ancêtres, (demi-)frères et s·urs, cousins, oncles et tantes- Interface graphique avec menus interactifs- Vérification de la cohérence des âges (ex. : un parent doit être plus âgé que son enfant)</p>
+        <div id="playlist">
+            <button class="btn" id="prev">Précédent</button>
+            <div class="media-container">
+                <!-- Un seul bloc vidéo -->
+                <video class="fonc-element" id="video" controls loop style="display: none;"></video>
+
+                <!-- Un seul bloc image -->
+                <img class="imageplaylist fonc-element" id="image" style="display: none;" alt="Image playlist" />
+
+                <!-- Boutons de navigation -->
+
+                <!-- Un petit espace décoratif ou pour les points de navigation -->
+                <div class="pois">
+                    <span id="s0"></span>
+                    <span id="s1"></span>
+                    <span id="s2"></span>
+                </div>
+
+                <div>
+                    <p id="p0" style="display: none;">Menu d'option</p>
+                    <p id="p1" style="display: none;">Ajouter un conjoint</p>
+                    <p id="p2" style="display: none;">Afficher l'arbre</p>
+                </div>
+        </div>
+            <button class="btn" id="next">Suivant</button>
+        </div>
     </section>
 
     <section id="defis">
@@ -91,5 +116,7 @@ GenealogyTreeApp : interface graphique principale</h2> -->
     <div class="fond">
         <img src="arbre_fond_transparent.png" alt="arbre">
     </div>
+
+
 </body>
 </html>

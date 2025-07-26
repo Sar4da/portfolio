@@ -9,311 +9,47 @@ body {
     overflow: hidden;
 }
 
-.contenue {
-    position: relative;
-    background-color: #015291;
-    border-radius: 4.6vh;
-    width: 80vw;
-    height: 80vh;
-    margin: 4vh auto;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    text-align: center;
-    z-index: 0;
-    overflow: hidden;
-    box-shadow: 0 0.2vh 0.8vh rgba(0, 0, 0, 0.1);
-}
-
-.contenue::after {
-    content: "";
-    z-index: -2;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #004473;
-    filter: blur(0.3vh);
-    left: 0;
-    top: 0;
-    border-radius: 4.6vh;
-}
-
-.contenue::before {
-    content: "";
-    position: absolute;
-    top: -0.6vh;
-    left: -0.6vw;
-    width: calc(100% + 1.2vw);
-    height: calc(100% + 1.2vh);
-    background: linear-gradient(45deg,
-            orange, gold, orange, #015291, #ff7300, orange, gold, orange);
-    background-size: 400%;
-    border-radius: 4.6vh;
-    filter: blur(0.6vh);
-    opacity: 1;
-    z-index: -2;
-    animation: glowing 39s linear infinite;
-    pointer-events: none;
-}
-
-@keyframes glowing {
-    0% {
-        background-position: 0 0;
-    }
-
-    50% {
-        background-position: 400% 0;
-    }
-
-    100% {
-        background-position: 0 0;
-    }
-}
-
-.acceuil {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-/* changemen,t */
-.mes-projets {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 97%;
-    transition: all 0.3s ease;
-    gap: 5vh;
+.media-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  background-color: #6495ed;
+  padding: 2vh;
+  border-radius: 1vh;
 }
 
 
-.retour-projets {
-    margin: 0 0.8vh;
-    padding: 0.2vh;
-    border: none;
-    outline: none;
-    color: #FFF;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 50%;
-    background-color: #f1a923;
-    width: 4.8vh;
-    height: 4.8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* //change  */
-.selection {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 50%;
-    gap: 1vh;
-}
-
-.bloc-bouton {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f1a923;
-    border-radius: 0.8vh;
-    padding: 1vh;
-    margin: 5vh;
-    width: fit-content;
-}
-
-.description {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
-    margin-top: 1vh;
-    background: #ffffff8b;
-    color: #000;
-    border-radius: 0.5vh;
-    font-size: 1.6vh;
-    width: 100%;
-    text-align: center;
-}
-
-.bloc-bouton:hover .description {
-    opacity: 1;
-    max-height: 20vh;
-}
-
-
-.bloc-projets {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: #f1a923;
-    color: #ffffff;
-    border-radius: 0.8vh;
-    font-size: 2.4vh;
-    cursor: pointer;
-    font-weight: bold;
+button {
+    padding: 1vh 2vh;
     font-size: 2vh;
+    background-color: #ffffff;
     border: none;
-    white-space: nowrap;
-}
-
-/* change pas  */
-.icon-img {
-    width: 3.6vh;
-    height: 3.6vh;
-    object-fit: contain;
-    border-radius: 50%;
-}
-
-/* change */
-
-.icon-img.bouton {
-    width: 30vh;
-    height: 30vh;
-    border-radius: 10%;
-}
-
-/****************************** bienvenue ******************************/
-/* Sélectionne le lien */
-a.tuto-lien {
-    color: #ffffff;
-    /* 🌈 couleur "lanc" - change selon ton goût */
-    background-color: transparent;
-    text-decoration: none;
-    /* enlève soulignement par défaut */
-    /* surlignement personnalisé */
-    padding-bottom: 2vh;
-    transition: all 0.3s ease;
-    border-bottom: #00437300 2vh solid;
-}
-
-/* Effet au survol */
-a.tuto-lien:hover {
-    color: #f1a923;
-    background-color: #015291;
-    border: #f1a923 2px solid;
-    padding: 1vh;
-}
-
-/* div bienvenue */
-
-.defilement-1 {
-    max-width: 600px;
-    overflow: hidden;
-    border: 6px solid #A6CAEC;
-}
-
-.defilement-1 .defilement {
-    animation: slider-1 55s infinite ease-in-out;
-    display: flex;
-}
-
-.defilement p {
-    background: #144475;
-    flex-shrink: 0;
-    padding: 72px 0;
-    width: 100%;
-    text-align: center;
-    font-size: 25px;
-    color: #ffffff;
-}
-
-.image-texte {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1vh;
-    padding: 72px 0;
-    width: 100%;
-    text-align: center;
-    font-size: 2.4vh;
-    color: #f1f1f1;
-    background: #000;
-}
-
-.texte {
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    /* espace entre les <span> */
-    text-align: center;
-    font-size: 2.4vh;
-    color: #f1f1f1;
-    background: #000;
-    padding: 4vh;
     border-radius: 1vh;
-
+    cursor: pointer;
 }
 
-.image-texte img {
-    width: 100%;
+video {
+    width: 90vh;
     height: auto;
 }
 
-#bienvenue {
-    /* milieu de l'ecran */
-    position: absolute;
-    background-color: #004473;
+img{
+    width: 90vh;
+    height: auto;
 }
 
-.bouton-bienvenue {
-    position: absolute;
-    bottom: 2vh;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f1a923;
-    color: #ffffff;
-    border: none;
-    border-radius: 0.8vh;
-    padding: 1vh 2vh;
-    font-size: 2.4vh;
-    cursor: pointer;
-    font-weight: bold;
+.pois {
+  display: flex;
+  justify-content: center;
+  gap: 1vh;
 }
 
-@keyframes slider-1 {
-
-    0%,
-    41% {
-        transform: translateX(0);
-    }
-
-    46.36%,
-    59% {
-        transform: translateX(-100%);
-    }
-
-    64.54%,
-    77% {
-        transform: translateX(-200%);
-    }
-
-    82.72%,
-    95% {
-        transform: translateX(-300%);
-    }
-
-    100% {
-        transform: translateX(-400%);
-    }
+span{
+    width: 2vh;
+    height: 2vh;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: inline-block;
+    margin-top: 2vh;
 }

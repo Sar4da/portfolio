@@ -1,86 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Playlist Mixte</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
 </head>
 
-<body>
-    <div class="contenue">
-        <section class="acceuil">
-            <div class="mes-projets">
-                <section class="selection">
-                    <div class="bloc-bouton">
-                        <button class="bloc-projets">
-                            <img src="acceuil copy.png" alt="fleche" class="icon-img bouton">
-                            Arbre genealogique
-                        </button>
-                        <p class="description">
-                            Projet réalisé en classe de L2 de l'année 23/24 à l'université d'Évry.
-                        </p>
-                    </div>
-                    <div class="bloc-bouton">
-                        <button class="bloc-projets">
-                            <img src="acceuil.png" alt="acceuil-mairie" class="icon-img bouton">
-                            Mairie
-                        </button>
-                        <p class="description">
-                            Projet réalisé en classe de L2 de l'année 24/25 à l'université d'Évry.
-                        </p>
-                    </div>
-                </section>
 
-                <button class="retour-projets" type="button" title="Retour aux projets">
-                    <img src="fleche.jpg" alt="fleche" class="icon-img" />
-                </button>
+<body>    
+    <button id="prev">⏪ Précédent</button>
+    <div class="media-container">
+    <!-- Un seul bloc vidéo -->
+    <video id="video" controls loop style="display: none;"></video>
 
-                <a href="#bienvenue" class="tuto-lien">
-                    Bonjour et bienvenue, cliquez ici...
-                </a>
-            </div>
-        </section>
+    <!-- Un seul bloc image -->
+    <img id="image" style="display: none;" alt="Image playlist" />
+
+    <!-- Boutons de navigation -->
+
+    <!-- Un petit espace décoratif ou pour les points de navigation -->
+    <div class="pois">
+  <span id="p0"></span>
+  <span id="p1"></span>
+  <span id="p2"></span>
+</div>
+   
+
     </div>
+    <button id="next">Suivant ⏩</button>
 
-    <div id="bienvenue" class="defilement-1">
-        <div class="defilement">
-            <p class="texte">
-                <span>Je suis Sara et je suis admise en L3 MIAGE par apprentissage.</span>
-                <span>Je cherche donc activement une
-                    alternance pour septembre 2025 d'une durée de un an, et de rythme une semaine en entreprise et
-                    une semaine à l'université.</span>
-                <span> Mon portfolio a pour but de vous apprendre un peu plus sur moi, à
-                    travers mes différents projets faits à l'université et mes réalisations.</span>
-                Je vous laisse donc voir l'organisation de mon portfolio.
-            </p>
-            <p class=" image-texte">
-                <img src="liens.JPG" alt="liens">
-                <span>Ici vous pouvez consulter mes liens comme mon cv. Je vous invite à être curieux.</span>
-            </p>
-            <p class="image-texte">
-                <img src=" projets.JPG" alt="projets">
-                <span> Ceci sont mes projets, le plus récent étant la mairie</span>
-            </p>
-            <p class="image-texte">
-                <img src=" autres.JPG" alt="autres">
-                <span>Finalement, mes autres réalisations, ces sont des projets moins accés sur la programmation mais
-                    que je trouve intéressants, si vous voulez plus me connaître</span>
-            </p>
-            <p class="texte">
-                <span>Je suis Sara et je suis admise en L3 MIAGE par apprentissage.</span>
-                <span>Je cherche donc activement une
-                    alternance pour septembre 2025 d'une durée de un an, et de rythme une semaine en entreprise et
-                    une semaine à l'université.</span>
-                <span> Mon portfolio a pour but de vous apprendre un peu plus sur moi, à
-                    travers mes différents projets faits à l'université et mes réalisations.</span>
-                Je vous laisse donc voir l'organisation de mon portfolio.
-            </p>
-            >
-        </div>
-        <button class="bouton-bienvenue" type="button" title="Arrêt">Retour</button </div>
 </body>
-
-
 </html>
