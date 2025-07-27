@@ -9,9 +9,7 @@
 </head>
 <body>
     <section id="titre"> 
-        <h1 id="arbre"> Arbre Généalogique </h1>
-
-
+        <h1 id="arbre">Arbre Généalogique</h1>
         <!-- <p> 🛠️ Technologies utilisées
             Langage : Java
             IDE : Visual Studio Code
@@ -23,43 +21,43 @@
             Modélisation UML : StarUML
         </p> -->      
     </section> 
-        <div id="p">
-            <p class="description-rapide" id="ldeux"> L2, Université d’Évry, 2023-2024</p>
-            <p class="description-rapide" id="en"> En groupe de 2</p>
-            <p class="description-rapide" id="lang"> Langage : JAVA</p>
-            <p class="description-rapide" id="bib"> Biblioothèques : Date, JCalendar, HashSet et ArrayList</p>
-            <p class="description-rapide" id="ide"> IDE : Visual Studio Code</p>
-        </div>
+
+    <div id="p">
+        <p class="description-rapide" id="ldeux"> L2, Université d’Évry, 2023-2024</p>
+        <p class="description-rapide" id="en"> En groupe de 2</p>
+        <p class="description-rapide" id="lang"> Langage : JAVA</p>
+        <p class="description-rapide" id="bib"> Biblioothèques : Date, JCalendar, HashSet et ArrayList</p>
+        <p class="description-rapide" id="ide"> IDE : Visual Studio Code</p>
+    </div>
+
     <section id="resume">
-        <h2> Résumé</h2>
-        <p>Ce projet a été réalisé dans le cadre du cours de Programmation Orientée Objet (L2, Université d’Évry, 2023-2024). </p>     
-        <p> En binôme, nous avons conçu une application Java permettant de créer, visualiser et interroger un arbre généalogique. Chaque personne est représentée comme un objet contenant ses informations personnelles et ses liens familiaux (parents, enfants, conjoints).</p>
-        <p>L’objectif était de manipuler des structures de données complexes et de mettre en œuvre les principes de l’héritage et de l’encapsulation.</p>
+        <h2>Résumé</h2>
+        <p>Ce projet a été réalisé dans le cadre du cours de Programmation Orientée Objet (L2, Université d’Évry, 2023-2024). 
+        Ce fut notre premier projet en Java et en binôme, sur la conception d'une application permettant de créer, visualiser et interroger un arbre généalogique. Chaque personne est représentée comme un objet contenant ses informations personnelles et ses liens familiaux (parents, enfants, frères, demi-frères, cousins et conjoints).
+        L’objectif était de manipuler des structures de données complexes et de mettre en œuvre les principes de l’héritage et de l’encapsulation.</p>
     </section>  
 
     <section id="structure">
         <h2>Structure du code</h2>
-        <p>Personne : classe de base avec nom, prénom, dates, parents, enfants, mariages</p> 
-        <p>Homme / Femme : héritent de Personne</p>
-        <p>Mariage : contient les conjoints, les enfants, les dates</p>
+        <p>Personne : classe avec des attributs comme nom, prénom, date de naissance, parents, mariages</p> 
+        <p>Homme / Femme : classes qui héritent ses constructeurs de Personne</p>
+        <p>Mariage : contient les conjoints et les enfants. Le nom est "Mariage" mais en fait plutôt référence à la liason entre deux personne, qu'a un "mariage" à propement parlé.</p>
         <p>ArbreGenealogique : gère la liste des personnes et des mariages</p>
-        <p>GenealogyTreeApp : interface graphique principale</p>
+        <p>GenealogyTreeApp : interface graphique principale. On y trouve des panels, une case options avec comme affichage, ajout d’enfant, ajout de conjoint et afficher arbre généalogique complet.</p>
     </section>
 
     <section id="fonction">
-        <h2> Fonctionnalités</h2>
+        <h2>Fonctionnalités</h2>
         <div id="playlist">
             <button class="btn" id="prev">Précédent</button>
             <div class="media-container">
-                <!-- Un seul bloc vidéo -->
+                <!-- bloc vidéo -->
                 <video class="fonc-element" id="video" controls loop style="display: none;"></video>
 
-                <!-- Un seul bloc image -->
+                <!-- bloc image -->
                 <img class="imageplaylist fonc-element" id="image" style="display: none;" alt="Image playlist" />
 
-                <!-- Boutons de navigation -->
-
-                <!-- Un petit espace décoratif ou pour les points de navigation -->
+                <!-- pour les points de navigation -->
                 <div class="pois">
                     <span id="s0"></span>
                     <span id="s1"></span>
@@ -67,9 +65,9 @@
                 </div>
 
                 <div>
-                    <p id="p0" style="display: none;">Menu d'option</p>
-                    <p id="p1" style="display: none;">Ajouter un conjoint</p>
-                    <p id="p2" style="display: none;">Afficher l'arbre</p>
+                    <p id="p0" style="display: none;">Le menu d'option. On pourra consulter pour l'instant l'affichage de l'arbre. Ajouter un conjoint, mais à une personne majeur et ajouter un enfant à un couple, pour l'instant c'est seulement possible aux relation hétérosexuelles.</p>
+                    <p id="p1" style="display: none;">L'option ajouter un conjoint, nous permettera d'ajouter une personne externe à l'arbre pour la lier à une personne de l'arbre. C'est possible seulement quand la personne est majeur.</p>
+                    <p id="p2" style="display: none;">L'option ajouter un enfant, nous permettera d'ajouter un enfant à un couple. Pour l'instant notre application ne gère que les liaisons de sexe différent et donc ce sont des enfants "naturels".</p>
                 </div>
         </div>
             <button class="btn" id="next">Suivant</button>
