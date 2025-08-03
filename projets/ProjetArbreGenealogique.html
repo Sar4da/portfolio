@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Arbre genealogique</title>
-    <link rel="stylesheet" href="styleProjets.css">
+    <link rel="stylesheet" href="../main.css">
     <script src="scriptProjets.js"></script>
 </head>
-<body>
+<body id="body-projet-arbre">
     <section id="titre"> 
         <h1 id="arbre">Arbre Généalogique</h1>
         <!-- <p> 🛠️ Technologies utilisées
@@ -23,33 +23,39 @@
     </section> 
 
     <div id="p">
-        <p class="description-rapide" id="ldeux"> L2, Université d’Évry, 2023-2024</p>
-        <p class="description-rapide" id="en"> En groupe de 2</p>
-        <p class="description-rapide" id="lang"> Langage : JAVA</p>
-        <p class="description-rapide" id="bib"> Biblioothèques : Date, JCalendar, HashSet et ArrayList</p>
-        <p class="description-rapide" id="ide"> IDE : Visual Studio Code</p>
+        <p class="description-rapide" id="ldeux">L2, Université d’Évry, 2023-2024</p>
+        <p class="description-rapide" id="en">En groupe de 2</p>
+        <p class="description-rapide" id="lang">Langage : JAVA</p>
+        <p class="description-rapide" id="bib">Bibliothèques : Date, JCalendar, HashSet et ArrayList</p>
+        <p class="description-rapide" id="ide">IDE : Visual Studio Code</p>
     </div>
 
     <section id="resume">
         <h2>Résumé</h2>
-        <p>Ce projet a été réalisé dans le cadre du cours de Programmation Orientée Objet (L2, Université d’Évry, 2023-2024). 
-        Ce fut notre premier projet en Java et en binôme, sur la conception d'une application permettant de créer, visualiser et interroger un arbre généalogique. Chaque personne est représentée comme un objet contenant ses informations personnelles et ses liens familiaux (parents, enfants, frères, demi-frères, cousins et conjoints).
-        L’objectif était de manipuler des structures de données complexes et de mettre en œuvre les principes de l’héritage et de l’encapsulation.</p>
+        <div class="paragraph">
+            <p>Ce projet a été réalisé dans le cadre du cours de Programmation Orientée Objet (L2, Université d’Évry, 2023-2024). 
+            Ce fut notre premier projet en Java et en binôme, sur la conception d'un programme permettant de créer, visualiser et interroger un arbre généalogique. Chaque personne est représentée comme un objet contenant ses informations personnelles et ses liens familiaux (parents).
+            L’objectif était de manipuler des structures de données complexes et de mettre en œuvre les principes de l’héritage et de l’encapsulation.</p>
+            <p>Dans cette présentation, je vous propose d'explorer la structure du code, les fonctionnalités accompagnées de tutoriel, ainsi que les défis et les améliorations envisagées.</p>
+        </div>
     </section>  
 
     <section id="structure">
         <h2>Structure du code</h2>
-        <p>Personne : classe avec des attributs comme nom, prénom, date de naissance, parents, mariages</p> 
-        <p>Homme / Femme : classes qui héritent ses constructeurs de Personne</p>
-        <p>Mariage : contient les conjoints et les enfants. Le nom est "Mariage" mais en fait plutôt référence à la liason entre deux personne, qu'a un "mariage" à propement parlé.</p>
-        <p>ArbreGenealogique : gère la liste des personnes et des mariages</p>
-        <p>GenealogyTreeApp : interface graphique principale. On y trouve des panels, une case options avec comme affichage, ajout d’enfant, ajout de conjoint et afficher arbre généalogique complet.</p>
+        <div class="classes paragraph">
+            <p>Le projet est structuré autour de plusieurs classes principales :</p>
+            <p>Personne : classe avec des attributs comme nom, prénom, date de naissance, parents et une liste de mariages</p> 
+            <p>Homme / Femme : classes qui héritent ses constructeurs de Personne</p>
+            <p>Mariage : contient les conjoints et les enfants. Le nom est "Mariage" mais fait plus référence à la liason entre deux personne, qu'a un "mariage" à propement parlé.</p>
+            <p>ArbreGenealogique : gère la liste des personnes et des mariages</p>
+            <p>GenealogyTreeApp : interface graphique principale. On y trouve des panels, un menu d'options avec ajout d’enfant, ajout de conjoint et afficher arbre généalogique complet.</p>
+        </div>
     </section>
 
     <section id="fonction">
         <h2>Fonctionnalités</h2>
         <div id="playlist">
-            <button class="btn" id="prev">Précédent</button>
+            <button class="btn-playlist" id="prev">Précédent</button>
             <div class="media-container">
                 <!-- bloc vidéo -->
                 <video class="fonc-element" id="video" controls loop style="display: none;"></video>
@@ -64,57 +70,54 @@
                     <span id="s2"></span>
                 </div>
 
-                <div>
-                    <p id="p0" style="display: none;">Le menu d'option. On pourra consulter pour l'instant l'affichage de l'arbre. Ajouter un conjoint, mais à une personne majeur et ajouter un enfant à un couple, pour l'instant c'est seulement possible aux relation hétérosexuelles.</p>
-                    <p id="p1" style="display: none;">L'option ajouter un conjoint, nous permettera d'ajouter une personne externe à l'arbre pour la lier à une personne de l'arbre. C'est possible seulement quand la personne est majeur.</p>
-                    <p id="p2" style="display: none;">L'option ajouter un enfant, nous permettera d'ajouter un enfant à un couple. Pour l'instant notre application ne gère que les liaisons de sexe différent et donc ce sont des enfants "naturels".</p>
+                <div class="description">
+                    <p id="p0" style="display: none;">Consultez le menu d'options pour voir l'arbre, ajouter un conjoint et ajouter un enfant à un couple. Cliquez pour en savoir plus.</p>
+                    <p id="p1" style="display: none;">L'option ajouter un conjoint nous permettra d'associer une personne externe à l'arbre à une personne de l'arbre, créant ainsi un mariage. Les personnes majeures peuvent être ajoutées à la liste des conjoints. Pour l'instant ce système gère les relations hétérosexuelles.</p>
+                    <p id="p2" style="display: none;">L'ajout d'un enfant nous permettra d'ajouter un enfant à un couple formé d'une femme et d'un homme. Il s'agit de listes de personnes majeurs.</p>
                 </div>
         </div>
-            <button class="btn" id="next">Suivant</button>
+            <button class="btn-playlist" id="next">Suivant</button>
         </div>
     </section>
 
     <section id="defis">
         <h2> Défis et limites</h2>
-        <p>Fusion du code en binôme : nous avons appris à mieux collaborer en codant ensemble sur place.
-Modélisation des classes : comprendre comment représenter les relations familiales en POO a été un vrai défi, notamment pour gérer les héritages entre Personne, Homme et Femme.
-Affichage de l’arbre : représenter visuellement les générations et les liens familiaux a nécessité une logique spécifique.</p>  
+        <div>
+            <p>Grâce à ce projet, nous avons pu mettre en pratique les concepts de la POO dans un contexte concret. Nous avons appris à modéliser des relations complexes et à créer une interface utilisateur intuitive. L’arbre généalogique est un excellent exemple d’application des principes de la POO, et nous sommes fières du résultat obtenu. Cependant, étant notre premier projet, le démarrage n'a pas été facile...</p>
+            <p>Fusion du code en binôme : une de nos difficultés a été la mise en commun du code, mon binôme s'occupait principalement de l'interface graphique et moi des autres classes, mais en travaillant chacune de notre côté on n'avançait pas au même rythme et je me trouvais plus lente qu'elle dans le développement. Comme solution, nous avons opté pour une programmation plus collaborative. J'ai passer plusieurs jours chez elle pour programmer, par exemple. </p>
+            <p>Modélisation des classes : le premier défi a été de définir ce qu'est un homme, ou plus précisément, la classe Homme, et la classe Femme. Mais grâce au cours d'héritage et aux réponses de notre professeur, petit à petit on a compris que c'est la classe Personne qui contient les attributs communs aux deux classes, puis on a hérité de cette classe pour créer Homme et Femme.</p> 
+        </div>
     </section>
 
     <section id="amels">
-        <h2>Amelioration envisagées</h2>
-        
+        <h2>Améliorations envisagées</h2>
+        <div>
+            <p>Le projet a été un excellent exercice de programmation orientée objet, mais il y a encore beaucoup de choses à améliorer. Voici quelques pistes que j'aimerais explorer :</p>
+            <p>Interface : pourquoi ne pas essayer de réimaginer l'interface graphique ? Je me demande, par exemple, si c'est possible de changer la manière de générer les branches.</p>
+            <p>Génération de l'arbre : je me suis rendu compte que créer l'arbre de zéro ne marchait pas bien, je veux donc regarder de plus près ce qu'il se passe. De plus, au sujet du point précédent, j'aimerais que l'arbre soit généré pour deux personnes à la racine au lieu d'une seule.</p>
+            <p>Adoption : un des points les plus importants, c'est de permettre d'ajouter des enfants issus d'adoption. Cela implique que je pourrais ajouter non seulement les couples homosexuels, mais aussi les familles monoparentales et ainsi faire en sorte d'avoir des arbres plus diversifiés.</p>
+            <p>Classes supplémentaires : je pense aussi à rajouter des classes décès et divorces qui pourraient être essentielles à rendre le système plus complet.</p>
+            <p>Liens entre deux personnes : enfin, le calcul du lien entre deux personnes.</p>
+        </div>
     </section>
-    
-    
-    <!--
-    <h2>objectif pédagogique</h2>
-    <p>- Appliquer les concepts de la POO (héritage, encapsulation, polymorphisme)- Manipuler des structures arborescentes- Créer une interface graphique avec Swing- Gérer des données dynamiques (ajout de personnes, mariages, enfan </p>
-    <h2> Fonctionnalités</h2>
-    <p>- Ajout de personnes (homme/femme) avec date de naissance et décès- Création de mariages et d·enfants- Affichage graphique de l·arbre généalogique- Consultation des informations d·une personne- Recherche des : ancêtres, (demi-)frères et s·urs, cousins, oncles et tantes- Interface graphique avec menus interactifs- Vérification de la cohérence des âges (ex. : un parent doit être plus âgé que son enfant)</p>
-    <h2>Défis rencontrés</h2>
-    <p>Fusion du code en binôme : nous avons appris à mieux collaborer en codant ensemble sur place.
-Modélisation des classes : comprendre comment représenter les relations familiales en POO a été un vrai défi, notamment pour gérer les héritages entre Personne, Homme et Femme.
-Affichage de l’arbre : représenter visuellement les générations et les liens familiaux a nécessité une logique spécifique.</p>
-    <h2>Améliorations envisagées</h2>
-    <p>Ce projet nous a permis de mettre en pratique les concepts de la POO dans un contexte concret. Nous avons appris à modéliser des relations complexes et à créer une interface utilisateur intuitive. L·arbre généalogique est un excellent exemple d·application des principes de la POO, et nous sommes fiers du résultat obtenu.</p>
-    <h2>💡 Améliorations envisagées
-Implémentation de la recherche du lien de parenté entre deux personnes (ex. : "cousin au 2e degré")
-Ajout des dates de décès et divorces
-Affichage des conjoints sans enfants
-Possibilité de visualiser l’arbre depuis le point de vue d’un conjoint
-
-📁 Structure du code
-Personne : classe de base avec nom, prénom, dates, parents, enfants, mariages
-Homme / Femme : héritent de Personne
-Mariage : contient les conjoints, les enfants, les dates
-ArbreGenealogique : gère la liste des personnes et des mariages
-GenealogyTreeApp : interface graphique principale</h2> -->
-   
+    <section id="liens">
+        <div class="liens-projets">
+            <button class="btn" onclick="window.open('https://www.linkedin.com/in/sara-inmaculada-kinkela-elonga', '_blank')">
+                <img src="../images/lnkdn.jpg" alt="LinkedIn" class="icon-img" />
+            </button>
+        <button class="btn" onclick="window.open('mailto:sara.kelonga@gmail.com')">
+                <img src="../images/gmail.png" alt="mail" class="icon-img" />
+            </button>
+            <button class="btn" onclick="window.open('ressources/cv Sara Inmaculada.pdf')">
+                <img src="../images/cv.jpg" alt="cv" class="icon-img" />
+            </button>
+            <button class="btn" onclick="window.open('https://github.com/Sar4da')">
+                <img src="../images/github.png" alt="github" class="icon-img" />
+            </button>
+        </div>
+    </section>
     <div class="fond">
-        <img src="arbre_fond_transparent.png" alt="arbre">
+        <img src="../images/arbre_fond_transparent.png" alt="arbre">
     </div>
-
-
 </body>
 </html>

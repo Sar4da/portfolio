@@ -78,3 +78,7 @@ document.addEventListener('click', function (event) {
         description.style.opacity = '0';
     }
 });
+
+
+
+
