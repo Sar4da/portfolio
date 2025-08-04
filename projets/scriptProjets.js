@@ -9,19 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const video = document.getElementById("video");
   const image = document.getElementById("image");
-//   const pois = document.body..getElementsByClassName("p" + current);
-  //afficher dans la console le nom du pois actuelle
 
   function update(index) {
     const item = playlist[index];
     // mis à jour des pois et des descriptions
-    for(let i = 0; i< playlist.length; i++){
-        if(document.getElementById("s" + i) == document.getElementById("s" + current)){
+    for(let i = 0; i < playlist.length; i++){
+        if(i === index){
             document.getElementById("s" + i).style.padding = "0.5vh";
             document.getElementById("s" + i).style.marginTop = "1.5vh";
             document.getElementById("p" + i).style.display = "block";
-        }
-        else {
+        } else {
             document.getElementById("s" + i).style.padding = "0";
             document.getElementById("s" + i).style.marginTop = "2vh";
             document.getElementById("p" + i).style.display = "none";
@@ -52,5 +49,4 @@ document.addEventListener("DOMContentLoaded", () => {
     update(current);
   });
 });
-
 
