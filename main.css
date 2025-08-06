@@ -654,6 +654,11 @@ h1 {
     animation-iteration-count: 0s;
 }
 
+#p p:nth-child(6){ 
+    animation: apparition 13s;
+    animation-iteration-count: 0s;
+}
+
 
 @keyframes fade-up{
     from {
@@ -808,22 +813,67 @@ video {
     width: 100%;
 }
 
-.liens.projets.arbre{
+.liens.projets.arbre {
     background-color: #5cb4b4;
     position: relative;
-    width: 100%;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 2vh; 
+    padding-left: 2vw; 
 }
 
 
 .liens.projets button::after{
-        background-color: #8ccfcf;
+    background-color: #8ccfcf;
 }
 
+.icon-img.projet {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
 
+.liens.projets.remerciment {
+    margin: 0;
+    font-size: 2vh;
+    white-space: normal;
+}
 /*      ECRAN       */
 
 
+@media (max-width: 1100px) {
+    h1 {
+        font-size: 10vh;
+        margin-top: 8vh;
+        text-align: center;
+    }
+    h2 {
+        font-size: 7vh;
+    }
 
+    #playlist {
+        max-width: 95vw;
+        gap: 1vh;
+        padding: 1vh;
+    }
+    .media-container {
+        gap: 1vh;
+        padding: 1vh;
+    }
+    video,
+    .imageplaylist {
+        width: 50vw;
+        max-width: 60vh;
+        height: auto;
+    }
+    .btn-playlist {
+        padding: 0.5vh 1vh;
+        font-size: 1.6vh;
+    }
+}
 
 
 
@@ -857,6 +907,8 @@ video {
 
 /* media query */
 @media (max-width: 768px) {
+
+
     .contenue {
         width: 90vw;
         height: 90vh;
