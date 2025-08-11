@@ -593,11 +593,15 @@ a.tuto-lien:hover {
 
 
 h1 {
-    color: rgba(0, 102, 204, 0.226);
     text-align:left;
     margin-top: 20vh;
     font-size: 20vh;
 }
+
+.titres-arbre{
+    color: rgba(0, 102, 204, 0.226);
+}
+
 
 
 @keyframes apparition{
@@ -672,7 +676,6 @@ h1 {
 }
 
 h2 {
-    color: rgba(0, 102, 204, 0.226);
     font-size: 15vh;
     animation: fade-up both;
     animation-timeline: view();
@@ -1041,4 +1044,11 @@ video {
     h2 {
         font-size: 7.8vh;
     }
+}
+
+.github-link-icon {
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 8px;
+    vertical-align: middle;
 }

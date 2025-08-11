@@ -71,6 +71,8 @@ function afficherBienvenue() {
     });
 }
 
+
+
 // desactiver desciption quand on clique ailleurs
 document.addEventListener('click', function (event) {
     const description = document.querySelector('.description');
