@@ -73,14 +73,33 @@ function afficherBienvenue() {
 
 
 
-// desactiver desciption quand on clique ailleurs
-document.addEventListener('click', function (event) {
-    const description = document.querySelector('.description');
-    if (description.style.opacity == '1') {
-        description.style.opacity = '0';
-    }
+const description = document.querySelector('.description');
+
+// Ajouter un gestionnaire de clic pour tous les blocs-boutons
+document.querySelectorAll('.bloc-bouton').forEach(blocBouton => {
+    blocBouton.addEventListener('click', function(event) {
+        // Vérifier si la description de ce bloc est visible
+        const descriptionDuBloc = this.querySelector('.description');
+        if (descriptionDuBloc) {
+            // Obtenir la valeur d'opacity calculée par CSS
+            const computedStyle = window.getComputedStyle(descriptionDuBloc);
+            const opacity = parseFloat(computedStyle.opacity);
+            
+            if (opacity < 1) {
+                // Si la description n'est pas visible, empêcher le clic
+                event.preventDefault();
+                event.stopPropagation();
+                return false;
+            }
+        }
+        
+        // Si on arrive ici, la description est visible, donc le clic est autorisé
+        // Récupérer l'URL depuis l'attribut data-url
+        const url = this.getAttribute('data-url');
+        if (url) {
+            window.location.href = url;
+        }
+    });
 });
 
-
-
-
+// Désactiver description quand on clique ailleurs - supprimé car géré par CSS hover
