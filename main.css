@@ -591,7 +591,6 @@ a.tuto-lien:hover {
     transform: rotate(195deg);
 }
 
-
 h1 {
     text-align:left;
     margin-top: 20vh;
@@ -627,7 +626,7 @@ h1 {
 
 
 #p p{
-    font-size: 1.7vh;
+    font-size: 1.8vh;
     color: rgb(0, 102, 204);
     text-align: center;
     margin-right: 0vh;
@@ -714,13 +713,116 @@ h2 {
 }
 
 #resume, #structure, #defis, #amels, #liens {
-    display: block; /* ou flex si besoin */
-    /* supprime grid-template-rows */
+    display: block; 
 }
 
 #fonction {
     display: flex;
     flex-direction: column;
+}
+
+/***********************************************************************************************************************************************************/
+/*********************************PROJETS*********************************/
+/*********************************MONTAGE PC*********************************/
+/***********************************************************************************************************************************************************/
+
+#body-projet-pc {
+    background-color:#ffe2ef;
+    font-family: Arial, sans-serif;
+    display: grid;
+        grid-template-areas: " titre  "
+                        " p "
+                        " resume "
+                        " structure "
+                        " fonction "
+                        " defis "
+                        " amels "
+                        " liens ";
+    grid-row-gap: 10vh ;
+}
+
+#structure ul {
+    list-style-type: none;
+    padding: 2vh;
+}
+
+#structure li{
+    width: 160vh;
+    margin: 1vh 0;
+    padding: 1vh;
+    background-color:#a4004a1b;
+    border-radius: 0.5vh;
+    font-size: 1.8vh;
+}
+
+#structure a{
+    color: #3d0026;
+    text-decoration: none;
+}
+
+#structure a:hover{
+    color: #bb668f;
+    text-decoration: underline;
+}
+
+#p .description-rapide.montage-pc {
+    color: #a4004a;
+}
+
+.titres-montage-pc {
+    color: #a4004a38;
+}
+
+.fond.montage-pc {
+        top: 100%;
+        right: 700px;
+        width: 2000px;
+}
+
+/* Matrice 2x2 pour la playlist */
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2vh;
+    width: 100%;
+    max-width: 80vh;
+    aspect-ratio: 1;
+}
+
+.matrix-cell video, .matrix-cell .imageplaylist {
+        width: 50vw;
+        max-width: 35vh;
+        height: 50vh;
+}
+
+@media (max-width: 1850px) {
+    .matrix-cell video, .matrix-cell .imageplaylist {
+        width: 50vw;
+        max-width: 35vh;
+        height: 50vh;
+    }
+    .fond.montage-pc {
+        top: 110%;
+        right: 600px;
+        width: 1000px;
+        transform: rotate(190deg);
+    }
+}
+
+#playlist.montage-pc {
+    display: flex;
+    flex-direction:row;
+}
+
+.media-container-montage-pc {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 2vh;
+    padding: 2vh;
+    border-radius: 1vh;
 }
 
 
@@ -739,12 +841,12 @@ h2 {
 }
 
 .media-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2vh;
-  padding: 2vh;
-  border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    padding: 2vh;
+    border-radius: 1vh;
 }
 
 video {
@@ -759,6 +861,10 @@ video {
 
 .fonc-element{
     filter: drop-shadow(4px 4px 6px #77b8b8);
+}
+
+.fonc-element.montage-pc {
+    filter: drop-shadow(4px 4px 6px #b877a0);
 }
 
 .pois {
@@ -779,10 +885,18 @@ video {
     transition: background 0.3s;
 }
 
-.caption p {  
+.pois-span.montage-pc{
+    background-color: #b45c85;
+    box-shadow: 0 2px 6px #b877a0;
+}
+
+.caption p, .caption-montage {  
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    top: center;
     gap: 1vh;
+    text-align: center;
+    height: 100%; /* ou la hauteur souhaitée */
 }
 
 /* Boutons playlist */
@@ -798,6 +912,10 @@ video {
     width: auto;
     height: auto;
     display: inline-block;
+}
+
+.btn-playlist.montage-pc{
+    background-color: #b45c85;
 }
 
 /***********************************************************************************************************************************************************/
@@ -816,8 +934,7 @@ video {
     width: 100%;
 }
 
-.liens.projets.arbre {
-    background-color: #5cb4b4;
+.liens.projets {
     position: relative;
     width: 98%;
     display: flex;
@@ -827,9 +944,20 @@ video {
     padding-left: 2vw; 
 }
 
+.liens.projets.arbre{
+    background-color: #5cb4b4;
+}
 
-.liens.projets button::after{
+.liens.projets.montage-pc {
+    background-color: #b45c85;
+}
+
+.liens.projets.arbre button::after{
     background-color: #8ccfcf;
+}
+
+.liens.projets.montage-pc button::after{
+    background-color: #cf8cb1;
 }
 
 .icon-img.projet {
@@ -843,12 +971,24 @@ video {
     margin: 0;
     font-size: 2vh;
     white-space: normal;
+}
+
+.liens.projets.remerciment.arbre {
     color: #c9d4d4;
 }
+
+.liens.projets.remerciment.montage-pc {
+    color: #d4c9cf;
+}
+
 /*      ECRAN       */
 
 
 @media (max-width: 1850px) {
+    /* index.html */
+
+
+    /*  */
     h1 {
         font-size: 19vh;
         text-align: center;
