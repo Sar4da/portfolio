@@ -347,7 +347,7 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 20%;
     height: 50%;
     gap: 1vh;
 }
@@ -1066,7 +1066,8 @@ video {
     }
 
     .presentatn {
-        top: 70%;
+        /* top: 70%; */
+        top: 30%;
         gap: 15vh;
     }
 
@@ -1081,12 +1082,14 @@ video {
 
 
     .mes-autres-reas {
-        bottom: 180%;
+        /* bottom: 180%; */
+        bottom: 160%;
         gap: 3vh;
     }
 
     .mes-projets {
-        top: 114%;
+        /* top: 114%; */
+        top: 94%;
         gap: 3vh;
     }
 
@@ -1130,11 +1133,13 @@ video {
 
     .retour-projets {
         position: absolute;
-        top: -5%;
+        /* top: -5%; */
+        top: 100%;
     }
 
     .retour-projets.autres {
-        top: 100%;
+        /* top: 100%; */
+        top: -15%;
     }
 
 
