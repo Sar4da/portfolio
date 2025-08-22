@@ -102,4 +102,10 @@ document.querySelectorAll('.bloc-bouton').forEach(blocBouton => {
     });
 });
 
-// Désactiver description quand on clique ailleurs - supprimé car géré par CSS hover
+// Désactiver description quand on clique ailleurs
+document.addEventListener('click', function (event) {
+    if (description.style.opacity == '1') {
+        description.style.opacity = '0';
+    }
+});
+
